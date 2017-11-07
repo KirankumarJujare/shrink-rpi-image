@@ -2,6 +2,8 @@
 
 IMG="$1"
 
+fdisk -lu $IMG
+
 if [[ -e $IMG ]]; then
 	P_START=$( fdisk -lu $IMG | grep Linux | awk '{print $2}' ) # Start of 2nd partition in 512 byte sectors
 	P_SIZE=$(( $( fdisk -lu $IMG | grep Linux | awk '{print $3}' ) * 1024 )) # Partition size in bytes
@@ -18,3 +20,6 @@ if [[ -e $IMG ]]; then
 else
 	echo "Usage: $0 filename"
 fi
+
+fdisk -lu $IMG
+
