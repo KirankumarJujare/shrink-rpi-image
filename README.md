@@ -16,6 +16,10 @@ cp /path/image.img .
 
 fdisk -lu image.img
 
+###WARNING### 
+#RUNNING THIS SCRIPT WILL MODIFY THE ORIGINAL .IMG which may not be recoverable if it goes wrong. 
+#Make sure you have a bakup, or use a copy of the original just in case!!!
+###############
 sudo ./rpi-shrink.sh image.img
 
 
