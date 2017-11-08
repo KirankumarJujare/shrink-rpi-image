@@ -9,7 +9,7 @@ df -h
 df -a
 mount
 fdisk -l
-
+cat /var/log/kern.log | grep -i filesystem
 ls -lrt /dev/disk/*
 
 
